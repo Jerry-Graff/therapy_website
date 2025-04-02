@@ -1,0 +1,126 @@
+/* Reset default margins and paddings, and set base font */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Navbar */
+  nav {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 20px;
+    z-index: 10;
+  }
+  nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('../images/hero-image.jpg') no-repeat center -250px;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 100px;
+    position: relative;
+  }
+  .hero-content {
+    text-align: right;
+    padding: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  .hero-content h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  .hero-content h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.1rem;
+  }
+  
+  /* Content Sections */
+  .content-section {
+    padding: 80px 20px;
+    min-height: 400px;
+  }
+  
+  /* Overall container */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Content Box: Constrain text width for left/right sections */
+  .content-box {
+    max-width: 50%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Section-specific background colours and alignment */
+  .section-left {
+    background-color: #E4D8CA;
+    text-align: left;
+  }
+  
+  .section-right {
+    background-color: #B2AC88 ;
+    text-align: left;
+  }
+  
+  /* Push the right section's content box flush to the right */
+  .section-right .content-box {
+    margin-left: auto;
+  }
+  
+  .section-centre {
+    background-color: #f0f0f9;
+    text-align: center;
+  }
+  
+  /* Contact Section: Center the form (no content-box here) */
+  #contact {
+    text-align: center;
+  }
+  #contact form {
+    display: inline-block;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1119px) {
+    nav {
+      font-size: 1.3rem;
+    }
+    .hero {
+      background: url('../images/hero-image.jpg') no-repeat center top;
+      background-size: cover;
+      padding-right: 75px;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    .hero-content h2 {
+      font-size: 1.5rem;
+    }
+    /* For small screens, allow content boxes to take full width */
+    .content-box {
+      max-width: 100%;
+    }
+  }
+  

@@ -1,0 +1,261 @@
+/* ============================== 
+   Reset & Base Font
+============================== */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ============================== 
+   Navbar
+============================== */
+nav {
+  position: absolute;
+  top: 20px;
+  right: 200px;
+  font-size: 1.7rem;
+  z-index: 10;
+}
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #942d00;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+nav a:hover {
+  color: #b34233;
+}
+
+/* ============================== 
+   Hero Section
+============================== */
+.hero {
+  background: url('../images/hero-image.jpg') no-repeat center -250px;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+  position: relative;
+}
+.hero-content {
+  text-align: left;
+  padding: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+/* Revert hero h1/h2 to Roboto */
+.hero-content h1,
+.hero-content h2 {
+  font-family: 'Roboto', sans-serif;
+}
+.hero-content h1 {
+  font-size: 4rem;
+  color: #942d00;
+  margin: 0;
+  line-height: 1;
+}
+.hero-content h2 {
+  font-size: 2rem;
+  color: #c3673f;
+  margin: 0.1rem 0 0;
+}
+
+/* ============================== 
+   Content Sections & Container
+============================== */
+.content-section {
+  padding: 80px 20px;
+  min-height: 400px;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.content-box {
+  font-size: large;
+  line-height: 1.7;
+  max-width: 50%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.content-section p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1em;
+}
+.content-section h2 {
+  font-size: 2.5rem;
+  color: #c3673f;
+  margin-bottom: 0.5em;
+}
+
+/* ============================== 
+   Section-specific Backgrounds & Alignment
+============================== */
+.section-left {
+  background-color: #E4D8CA; /* Fainter version of #C9B194 */
+  text-align: left;
+}
+.section-right {
+  background-color: #B2AC88; /* Fainter version of #706D54 with a hint of green */
+  text-align: left;
+}
+.section-right .content-box {
+  margin-left: auto;
+}
+.section-centre {
+  background-color: #f0f0f9;
+  text-align: center;
+}
+
+/* ============================== 
+   About Section Specific
+============================== */
+#about {
+  position: relative;
+}
+.bacp-logo {
+  position: absolute;
+  right: 500px; /* adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* ============================== 
+   Sessions Section Specific
+============================== */
+#sessions {
+  position: relative;
+}
+.therapy-room {
+  position: absolute;
+  right: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* ============================== 
+   Quote Section
+============================== */
+.quote-section {
+  background: url('../images/misty-forrest.jpg') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.quote-content {
+  font-family: 'Spectral', serif;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+.quote-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.quote-author {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  text-align: center;
+  display: inline-block;
+  transform: translateX(20px);
+}
+
+/* ============================== 
+   Contact Section & Form
+============================== */
+#contact {
+  text-align: center;
+}
+#contact form {
+  display: inline-block;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+}
+#contact button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #c3673f; /* same as contact heading color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#contact button:hover {
+  background-color: #b34233;
+}
+
+/* ============================== 
+   Form Input Fields
+============================== */
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* ============================== 
+   Media Queries
+============================== */
+@media (max-width: 1119px) {
+  nav {
+    font-size: 1.3rem;
+    right: 10px;
+  }
+  .hero {
+    background: url('../images/hero-image.jpg') no-repeat center top;
+    background-size: cover;
+    padding-left: 75px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  .content-box {
+    max-width: 100%;
+  }
+  #sessions .therapy-room {
+    position: static;
+    transform: none;
+    margin: 20px auto 0;
+  }
+}

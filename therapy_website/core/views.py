@@ -5,7 +5,8 @@ from .forms import ContactForm
 
 
 def home(request):
-    return render(request, "core/home.html")
+    form = ContactForm()
+    return render(request, "core/home.html", {'form': form})
 
 
 def form_send(request):

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe Robinson Counselling</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Hero Section and Navbar-->
+  <section class="hero">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#approach">Approach</a>
+      <a href="#sessions">Sessions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hero-content">
+      <h1>Joe Robinson</h1>
+      <h2>Counselling and Psychotherapy</h2>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="content-section section-left">
+    <div class="container">
+      <div class="content-box">
+        <h2>About</h2>
+        <p>I work with individuals, often men but not always, both in-person and online. Many of my clients are dealing with relationship struggles, anxiety, trauma, grief, depression, or questions around identity and purpose. Some feel under pressure to have everything together, even when they’re struggling beneath the surface. Others just feel lost or disconnected.</p>
+        <p>Whatever’s going on for you, I offer a space where we can explore it without judgment—just honesty, curiosity, and a focus on what’s best for you.</p>
+        <p>I hold an Advanced Diploma in Humanistic Integrative Counselling from CPPD in North London. I’m a registered member of the British Association for Counselling and Psychotherapy (MBACP) and follow their ethical guidelines. I’ve worked in a range of mental health settings and currently volunteer with Southeast London Mind. I also hold an enhanced DBS check.</p>
+      </div>
+      <div>
+        <img src="{% static 'core/images/bacp-logo.png' %}" alt="BACP Logo" class="bacp-logo">
+      </div>
+    </div>
+  </section>
+
+  <!--Image and Quote 1-->
+  <section id="quote-section" class="quote-section">
+    <div class="quote-content">
+      <p class="quote-text">"The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed."</p>
+      <p class="quote-author">Carl Jung</p>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section id="approach" class="content-section section-right">
+    <div class="container">
+      <div class="content-box">
+        <h2>Approach</h2>
+        <p>I’m an integrative psychotherapeutic counsellor, which means I don’t believe in a one-size-fits-all approach. I draw from different therapeutic styles to suit your needs, but the foundation of our work will always be trust, openness, and real conversation.</p>
+        <p>Therapy can be a place to step back from the noise, to see yourself more clearly, and to try out new ways of thinking and being. We might look at patterns that are holding you back, work through feelings of frustration or self-doubt, or build a stronger sense of confidence and direction. Ultimately, therapy is about self-understanding and growth—learning to turn down the volume on self-criticism, make peace with the past, and move forward in a way that feels right for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--Image and Quote 2-->
+  <section id="quote-section" class="quote-section">
+    <div class="quote-content">
+      <p class="quote-text">"The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed."</p>
+      <p class="quote-author">Carl Jung</p>
+    </div>
+  </section>
+
+  <!-- Sessions -->
+  <section id="sessions" class="content-section section-left">
+    <div class="container">
+      <div class="content-box">
+        <h2>Sessions</h2>
+        <p>Therapy is different for everyone. Some people come with a clear issue they want to work through, while others just need a space to figure things out as they go. However we approach it, this will be a collaborative process—led by you, supported and shaped together.</p>
+        <p>I offer sessions in-person in <strong>Telegraph Hill</strong>(close to Peckham/New Cross/Brockley), in <strong>London Bridge</strong>, or online <strong>via Zoom</strong>. Sessions are usually weekly. I charge £60 per session, unless in London Bridge, in which case £70.</p>
+        <p>If you’re thinking about therapy, I’d be happy to hear from you.</p>
+      </div>
+    </div>
+    <img src="{% static 'core/images/therapy-room.jpg' %}" alt="Therapy Room" class="therapy-room">
+  </section>
+  <!-- Contact -->
+  <section id="contact" class="content-section section-centre">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Fill out the form and I will be in touch.</p>
+      <form method="post" action="{% url 'form_send' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Navbar smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Dynamic scroll to decrease brightness on hero image
+    window.addEventListener('scroll', function() {
+      const elements = document.querySelectorAll('.hero');
+      const scrollPosition = window.scrollY;
+      const brightness = Math.max(100 - scrollPosition * 0.1, 50);
+      elements.forEach(el => {
+        el.style.filter = `brightness(${brightness}%)`;
+      });
+    });
+
+  </script>
+</body>
+</html>
