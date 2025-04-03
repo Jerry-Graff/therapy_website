@@ -15,7 +15,7 @@ body {
 nav {
   position: absolute;
   top: 20px;
-  right: 200px;
+  right: 250px;
   font-size: 1.7rem;
   z-index: 10;
 }
@@ -45,10 +45,10 @@ nav a:hover {
 }
 .hero-content {
   text-align: left;
-  padding: 20px;
+  padding: 40px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
-/* Revert hero h1/h2 to Roboto */
+/* Hero text uses Roboto */
 .hero-content h1,
 .hero-content h2 {
   font-family: 'Roboto', sans-serif;
@@ -76,6 +76,10 @@ nav a:hover {
   max-width: 960px;
   margin: 0 auto;
 }
+
+/* ============================== 
+   Content Box Reveal (Only the text & images reveal)
+============================== */
 .content-box {
   font-size: large;
   line-height: 1.7;
@@ -83,9 +87,16 @@ nav a:hover {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+.content-box.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .content-section p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #333;
   line-height: 1.8;
   margin-bottom: 1em;
@@ -123,7 +134,7 @@ nav a:hover {
 }
 .bacp-logo {
   position: absolute;
-  right: 500px; /* adjust as needed */
+  left: calc(55% + 20px); /* positions the logo 20px to the right of the container's center */
   top: 50%;
   transform: translateY(-50%);
   width: 250px;
@@ -139,7 +150,7 @@ nav a:hover {
 }
 .therapy-room {
   position: absolute;
-  right: 300px;
+  left: calc(55% + 20px);  /* Positions the image 20px to the right of center */
   top: 50%;
   transform: translateY(-50%);
   width: 500px;
@@ -150,23 +161,65 @@ nav a:hover {
 /* ============================== 
    Quote Section
 ============================== */
+/* Quote Section 1 */
 .quote-section {
-  background: url('../images/misty-forrest.jpg') no-repeat center center;
+  position: relative;
+  background: url('../images/misty-forest.jpg') no-repeat center center;
   background-size: cover;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
+
+/* Overlay for Quote Section 1 */
+.quote-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+/* Quote Section 2 */
+.quote-section-2 {
+  position: relative;
+  background: url('../images/sunrise-forest.jpg') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay for Quote Section 2 */
+.quote-section-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+/* Quote Content */
 .quote-content {
+  position: relative;
+  z-index: 2;
   font-family: 'Spectral', serif;
   width: 100%;
   color: white;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 40px; /* Increased horizontal padding */
 }
 .quote-text {
+  font-style: italic;
+  font-weight: 600;
   font-size: 2.5rem;
   font-weight: bold;
   margin: 0;
@@ -199,7 +252,7 @@ nav a:hover {
   font-size: 1.2rem;
   border: none;
   border-radius: 10px;
-  background-color: #c3673f; /* same as contact heading color */
+  background-color: #c3673f;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;

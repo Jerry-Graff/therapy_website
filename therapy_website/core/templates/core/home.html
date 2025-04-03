@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joe Robinson Counselling</title>
   {% load static %}
+  <link rel="icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon">
   <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
@@ -43,7 +44,7 @@
   <!--Image and Quote 1-->
   <section id="quote-section" class="quote-section">
     <div class="quote-content">
-      <p class="quote-text">"The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed."</p>
+      <p class="quote-text">"Your visions will become clear only when you can look into your own heart. Who looks outside, dreams; who looks inside, awakes."</p>
       <p class="quote-author">Carl Jung</p>
     </div>
   </section>
@@ -60,10 +61,10 @@
   </section>
 
   <!--Image and Quote 2-->
-  <section id="quote-section" class="quote-section">
+  <section id="quote-section" class="quote-section quote-section-2">
     <div class="quote-content">
-      <p class="quote-text">"The meeting of two personalities is like the contact of two chemical substances: if there is any reaction, both are transformed."</p>
-      <p class="quote-author">Carl Jung</p>
+      <p class="quote-text">"Knowing yourself is the beginning of all wisdom."</p>
+      <p class="quote-author">Aristotle</p>
     </div>
   </section>
 
@@ -113,6 +114,21 @@
         el.style.filter = `brightness(${brightness}%)`;
       });
     });
+
+    // Function to make text appear as user scrolls
+    function revealBoxes() {
+      const boxes = document.querySelectorAll('.content-box');
+      const windowHeight = window.innerHeight;
+      boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        if (boxTop < windowHeight * 0.8) {
+          box.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealBoxes);
+    window.addEventListener('load', revealBoxes);
 
   </script>
 </body>
