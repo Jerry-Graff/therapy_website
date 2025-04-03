@@ -7,19 +7,33 @@
   {% load static %}
   <link rel="icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon">
   <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'core/css/mobile_tablet_styles.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Hero Section and Navbar-->
+  <!-- Hero Section -->
   <section class="hero">
-    <nav>
+    <!-- Desktop/Tablet Navbar (visible on screens ≥ 901px) -->
+    <nav class="desktop-nav">
       <a href="#about">About</a>
       <a href="#approach">Approach</a>
       <a href="#sessions">Sessions</a>
       <a href="#contact">Contact</a>
     </nav>
+    
+    <!-- Mobile Navbar (visible on screens ≤ 450px) -->
+    <nav class="mobile-nav">
+      <button class="mobile-nav-toggle">☰</button>
+      <div class="mobile-nav-menu">
+        <a href="#about">About</a>
+        <a href="#approach">Approach</a>
+        <a href="#sessions">Sessions</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    
     <div class="hero-content">
       <h1>Joe Robinson</h1>
       <h2>Counselling and Psychotherapy</h2>
@@ -95,41 +109,59 @@
 
   <!-- JavaScript -->
   <script>
-    // Navbar smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+    document.addEventListener('DOMContentLoaded', function() {
+      // Desktop/Tablet nav toggle (only active on screens ≥ 901px)
+      var desktopToggle = document.querySelector('.desktop-nav-toggle');
+      var desktopNav = document.querySelector('.desktop-nav');
+      if (desktopToggle) {
+        desktopToggle.addEventListener('click', function() {
+          desktopNav.classList.toggle('active');
+        });
+      }
+
+      // Mobile nav toggle (only active on screens ≤ 450px)
+      var mobileToggle = document.querySelector('.mobile-nav-toggle');
+      var mobileNav = document.querySelector('.mobile-nav');
+      if (mobileToggle) {
+        mobileToggle.addEventListener('click', function() {
+          mobileNav.classList.toggle('active');
+        });
+      }
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
         });
       });
-    });
 
-    // Dynamic scroll to decrease brightness on hero image
-    window.addEventListener('scroll', function() {
-      const elements = document.querySelectorAll('.hero');
-      const scrollPosition = window.scrollY;
-      const brightness = Math.max(100 - scrollPosition * 0.1, 50);
-      elements.forEach(el => {
-        el.style.filter = `brightness(${brightness}%)`;
-      });
-    });
-
-    // Function to make text appear as user scrolls
-    function revealBoxes() {
-      const boxes = document.querySelectorAll('.content-box');
-      const windowHeight = window.innerHeight;
-      boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top;
-        if (boxTop < windowHeight * 0.8) {
-          box.classList.add('visible');
+      // Dynamic scroll to decrease brightness on hero image
+      window.addEventListener('scroll', function() {
+        const hero = document.querySelector('.hero');
+        const scrollPosition = window.scrollY;
+        const brightness = Math.max(100 - scrollPosition * 0.1, 50);
+        if (hero) {
+          hero.style.filter = `brightness(${brightness}%)`;
         }
       });
-    }
 
-    window.addEventListener('scroll', revealBoxes);
-    window.addEventListener('load', revealBoxes);
-
+      // Reveal content on scroll
+      function revealBoxes() {
+        const boxes = document.querySelectorAll('.content-box');
+        const windowHeight = window.innerHeight;
+        boxes.forEach(box => {
+          const boxTop = box.getBoundingClientRect().top;
+          if (boxTop < windowHeight * 0.8) {
+            box.classList.add('visible');
+          }
+        });
+      }
+      window.addEventListener('scroll', revealBoxes);
+      window.addEventListener('load', revealBoxes);
+    });
   </script>
 </body>
 </html>

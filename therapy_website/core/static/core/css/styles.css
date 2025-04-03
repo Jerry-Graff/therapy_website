@@ -12,21 +12,24 @@ body {
 /* ============================== 
    Navbar
 ============================== */
-nav {
+.desktop-nav {
   position: absolute;
   top: 20px;
   right: 250px;
   font-size: 1.7rem;
   z-index: 10;
 }
-nav a {
+
+.desktop-nav a {
+  display: inline-block;
   margin-left: 30px;
   text-decoration: none;
   color: #942d00;
   font-weight: bold;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
-nav a:hover {
+
+.desktop-nav a:hover {
   color: #b34233;
 }
 
@@ -89,7 +92,7 @@ nav a:hover {
   box-sizing: border-box;
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
+  transition: opacity 1.5s ease, transform 1.5s ease;
 }
 .content-box.visible {
   opacity: 1;
@@ -284,31 +287,8 @@ form textarea:focus {
   font-style: italic;
 }
 
-/* ============================== 
-   Media Queries
-============================== */
-@media (max-width: 1119px) {
-  nav {
-    font-size: 1.3rem;
-    right: 10px;
-  }
-  .hero {
-    background: url('../images/hero-image.jpg') no-repeat center top;
-    background-size: cover;
-    padding-left: 75px;
-  }
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  .hero-content h2 {
-    font-size: 1.5rem;
-  }
-  .content-box {
-    max-width: 100%;
-  }
-  #sessions .therapy-room {
-    position: static;
-    transform: none;
-    margin: 20px auto 0;
+@media (min-width: 501px) {
+  .mobile-nav {
+    display: none;
   }
 }

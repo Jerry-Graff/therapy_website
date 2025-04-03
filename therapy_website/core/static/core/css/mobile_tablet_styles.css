@@ -1,0 +1,185 @@
+/* ORIGINAL IMAGE RENDERING (up to 1119px) */
+@media (max-width: 1119px) {
+    .hero {
+      background: url('../images/hero-image.jpg') no-repeat center top;
+      background-size: cover;
+      padding-left: 75px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    section.content-section {
+      text-align: center !important;
+    }
+    section.content-section p,
+    section.content-section h1,
+    section.content-section h2 {
+      text-align: center !important;
+    }
+  }
+  /* ---------- MOBILE STYLES (up to 350px) ---------- */
+@media (max-width: 350px) {
+    /* Mobile Navbar */
+    .mobile-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 15px;
+      text-align: right;
+      width: calc(100% - 40px);
+      z-index: 10;
+    }
+    .mobile-nav-toggle {
+      color: #942d00;
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .mobile-nav-menu {
+      display: none;
+      padding: 10px;
+      margin-top: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      text-align: right;
+    }
+    .mobile-nav.active .mobile-nav-menu {
+      display: block;
+    }
+    .mobile-nav-menu a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #942d00;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    /* Hide Desktop Nav on Mobile */
+    .desktop-nav {
+      display: none;
+    }
+    /* Hero Section */
+    .hero-content {
+      padding-top: 170px;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      margin: 0 auto;
+    }
+    .hero-content h2 {
+      font-size: 1.2rem;
+      margin: 0 auto;
+    }
+    /* Content Section: Override text alignment and text size */
+    .section-left,
+    .section-right,
+    .section-centre {
+      text-align: center;
+    }
+    .content-section h2 {
+      font-size: 1.8rem;
+    }
+    .content-section p {
+      font-size: 0.8rem;
+    }
+    /* Stack images below text */
+    #about .container,
+    #sessions .container {
+      display: block;
+    }
+    .bacp-logo,
+    .therapy-room {
+      position: static;
+      transform: none;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  /* ---------- MOBILE STYLES (351px to 500px) ---------- */
+  @media (min-width: 351px) and (max-width: 500px) {
+    /* Mobile Navbar */
+    .mobile-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 15px;
+      text-align: right;
+      width: calc(100% - 40px);
+      z-index: 10;
+    }
+    .mobile-nav-toggle {
+      color: #942d00;
+      background: transparent;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .mobile-nav-menu {
+      display: none;
+      padding: 10px;
+      margin-top: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      text-align: right;
+    }
+    .mobile-nav.active .mobile-nav-menu {
+      display: block;
+    }
+    .mobile-nav-menu a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color: #942d00;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    /* Hide Desktop Nav on Mobile */
+    .desktop-nav {
+      display: none;
+    }
+    /* Hero Section */
+    .hero-content {
+      padding-top: 170px;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin: 0 auto;
+    }
+    .hero-content h2 {
+      font-size: 1.3rem;
+      margin: 0 auto;
+    }
+    /* Content Section: Override text alignment and text size */
+    .section-left,
+    .section-right,
+    .section-centre {
+      text-align: center;
+    }
+    .content-section h2 {
+      font-size: 1.8rem;
+    }
+    .content-section p {
+      font-size: 0.9rem;
+    }
+    /* Stack images below text */
+    #about .container,
+    #sessions .container {
+      display: block;
+    }
+    .bacp-logo,
+    .therapy-room {
+      position: static;
+      transform: none;
+      width: 80%;
+      margin-top: 20px;
+    }
+  }
+
+  
