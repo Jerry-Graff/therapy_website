@@ -13,15 +13,20 @@ def form_send(request):
     form = ContactForm(request.POST or None)
     if request.method == 'POST' and form.is_valid():
         clean = form.cleaned_data
-        body = f"Message from {clean['name']} ({clean['email']}):\n\n{clean['message']}"
+        phone = clean.get('phone_number', 'Not provided')
+        body = (
+            f"Message from: {clean['name']}\n"
+            f"Email: {clean['email']}\n"
+            f"Phone: {phone}\n\n"
+            f"{clean['message']}"
+        )
         owner_email = os.environ.get('FORM_EMAIL')
         send_mail(
-            'Contact Form Submission',
+            'Counselling Enquiry',
             body,
             owner_email,
             [owner_email],
             fail_silently=False,
-            reply_to=[clean['email']]
         )
         return redirect('home')
     return render(request, 'core/home.html', {'form': form})
