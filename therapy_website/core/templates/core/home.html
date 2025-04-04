@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joe Robinson Counselling</title>
-  {% load static %}
-  <link rel="icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon">
-  <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
-  <link rel="stylesheet" href="{% static 'core/css/mobile_tablet_styles.css' %}">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
-</head>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page Title -->
+    <title>Joe Robinson Counselling | South London Counselling & Psychotherapy</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Joe Robinson Counselling offers integrative counselling and psychotherapy in South London, specializing in relationship therapy, anxiety, trauma, and depression. Serving Nunhead, Peckham, London Bridge, and Central London.">
+    
+    <!-- Meta Keywords (optional) -->
+    <meta name="keywords" content="counselling, therapy, psychotherapy, South London, Nunhead, Peckham, London Bridge, Central London, relationship counselling, anxiety therapy">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    
+    <!-- JSON-LD Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Joe Robinson Counselling",
+      "description": "Integrative counselling and psychotherapy services in South London, offering support for relationship issues, anxiety, trauma, and depression.",
+      "areaServed": ["South London", "Nunhead", "Peckham", "London Bridge", "Central London"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "YOUR STREET ADDRESS",
+        "addressLocality": "London",
+        "addressRegion": "Greater London",
+        "postalCode": "YOUR POSTAL CODE",
+        "addressCountry": "UK"
+      },
+      "url": "https://yourdomain.com/"
+    }
+    </script>
+    
+    <!-- Favicon and CSS -->
+    {% load static %}
+    <link rel="icon" href="{% static 'core/images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/mobile_tablet_styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
 <body>
   <!-- Hero Section -->
   <section class="hero">
