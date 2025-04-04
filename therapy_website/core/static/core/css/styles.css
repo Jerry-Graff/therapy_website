@@ -114,11 +114,11 @@ body {
    Section-specific Backgrounds & Alignment
 ============================== */
 .section-left {
-  background-color: #E4D8CA; /* Fainter version of #C9B194 */
+  background-color: #E4D8CA;
   text-align: left;
 }
 .section-right {
-  background-color: #B2AC88; /* Fainter version of #706D54 with a hint of green */
+  background-color: #B2AC88;
   text-align: left;
 }
 .section-right .content-box {
@@ -137,7 +137,7 @@ body {
 }
 .bacp-logo {
   position: absolute;
-  left: calc(55% + 20px); /* positions the logo 20px to the right of the container's center */
+  left: calc(55% + 20px);
   top: 50%;
   transform: translateY(-50%);
   width: 250px;
@@ -153,7 +153,7 @@ body {
 }
 .therapy-room {
   position: absolute;
-  left: calc(55% + 20px);  /* Positions the image 20px to the right of center */
+  left: calc(55% + 20px);
   top: 50%;
   transform: translateY(-50%);
   width: 500px;
@@ -183,7 +183,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -206,7 +206,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -218,7 +218,7 @@ body {
   width: 100%;
   color: white;
   text-align: center;
-  padding: 0 40px; /* Increased horizontal padding */
+  padding: 0 40px;
 }
 .quote-text {
   font-style: italic;
@@ -228,7 +228,7 @@ body {
   margin: 0;
 }
 .quote-author {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   margin-top: 20px;
   text-align: center;
   display: inline-block;
@@ -287,7 +287,7 @@ form textarea:focus {
   font-style: italic;
 }
 
-@media (min-width: 501px) {
+@media (min-width: 1201px) {
   .mobile-nav {
     display: none;
   }
