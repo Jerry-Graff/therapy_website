@@ -1,126 +1,301 @@
-/* Reset default margins and paddings, and set base font */
+/* ============================== 
+   Reset & Base Font
+============================== */
 html, body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ============================== 
+   Navbar
+============================== */
+.desktop-nav {
+  position: absolute;
+  top: 20px;
+  right: 250px;
+  font-size: 1.7rem;
+  z-index: 10;
+}
+
+.desktop-nav a {
+  display: inline-block;
+  margin-left: 30px;
+  text-decoration: none;
+  color: #c3673f;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.desktop-nav a:hover {
+  color: #b34233;
+}
+
+/* ============================== 
+   Hero Section
+============================== */
+.hero {
+  background: url('../images/hero-image.jpg') no-repeat center -250px;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+  position: relative;
+}
+.hero-content {
+  text-align: left;
+  padding: 40px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+/* Hero text uses Roboto */
+.hero-content h1,
+.hero-content h2 {
+  font-family: 'Roboto', sans-serif;
+}
+.hero-content h1 {
+  font-size: 4rem;
+  color: #942d00;
+  margin: 0;
+  line-height: 1;
+}
+.hero-content h2 {
+  font-size: 2rem;
+  color: #c3673f;
+  margin: 0.1rem 0 0;
+}
+
+/* ============================== 
+   Content Sections & Container
+============================== */
+.content-section {
+  padding: 80px 20px;
+  min-height: 400px;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ============================== 
+   Content Box Reveal (Only the text & images reveal)
+============================== */
+.content-box {
+  font-size: large;
+  line-height: 1.7;
+  max-width: 50%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.content-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.content-section p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1em;
+}
+.content-section h2 {
+  font-size: 2.5rem;
+  color: #c3673f;
+  margin-bottom: 0.5em;
+}
+
+/* ============================== 
+   Section-specific Backgrounds & Alignment
+============================== */
+.section-left {
+  background-color: #E4D8CA;
+  text-align: left;
+}
+.section-right {
+  background-color: #B2AC88;
+  text-align: left;
+}
+.section-right .content-box {
+  margin-left: auto;
+}
+.section-centre {
+  background-color: #f0f0f9;
+  text-align: center;
+}
+
+/* ============================== 
+   About Section Specific
+============================== */
+#about {
+  position: relative;
+}
+.bacp-logo {
+  position: absolute;
+  left: calc(55% + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* ============================== 
+   Sessions Section Specific
+============================== */
+#sessions {
+  position: relative;
+}
+.therapy-room {
+  position: absolute;
+  left: calc(55% + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* ============================== 
+   Quote Section
+============================== */
+/* Quote Section 1 */
+.quote-section {
+  position: relative;
+  background: url('../images/misty-forest.jpg') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay for Quote Section 1 */
+.quote-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Quote Section 2 */
+.quote-section-2 {
+  position: relative;
+  background: url('../images/sunrise-forest.jpg') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay for Quote Section 2 */
+.quote-section-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Quote Content */
+.quote-content {
+  position: relative;
+  z-index: 2;
+  font-family: 'Spectral', serif;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 40px;
+}
+.quote-text {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+.quote-author {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  text-align: center;
+  display: inline-block;
+  transform: translateX(20px);
+}
+
+/* ============================== 
+   Contact Section & Form
+============================== */
+#contact {
+  text-align: center;
+}
+#contact form {
+  display: inline-block;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+}
+#contact button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #c3673f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#contact button:hover {
+  background-color: #b34233;
+}
+
+.form-note {
+  color: #666;
+  font-family: inherit;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* ============================== 
+   Form Input Fields
+============================== */
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #007BFF;
+}
+::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+@media (min-width: 1201px) {
+  .mobile-nav {
+    display: none;
   }
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  /* Navbar */
-  nav {
-    position: absolute;
-    font-size: 1.5rem;
-    top: 20px;
-    z-index: 10;
-  }
-  nav a {
-    margin-left: 30px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: url('../images/hero-image.jpg') no-repeat center -250px;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 100px;
-    position: relative;
-  }
-  .hero-content {
-    text-align: right;
-    padding: 20px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  }
-  .hero-content h1 {
-    font-size: 4rem;
-    color: white;
-    margin-bottom: 0;
-    line-height: 1;
-  }
-  .hero-content h2 {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 0.1rem;
-  }
-  
-  /* Content Sections */
-  .content-section {
-    padding: 80px 20px;
-    min-height: 400px;
-  }
-  
-  /* Overall container */
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-  
-  /* Content Box: Constrain text width for left/right sections */
-  .content-box {
-    max-width: 50%;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  /* Section-specific background colours and alignment */
-  .section-left {
-    background-color: #E4D8CA;
-    text-align: left;
-  }
-  
-  .section-right {
-    background-color: #B2AC88 ;
-    text-align: left;
-  }
-  
-  /* Push the right section's content box flush to the right */
-  .section-right .content-box {
-    margin-left: auto;
-  }
-  
-  .section-centre {
-    background-color: #f0f0f9;
-    text-align: center;
-  }
-  
-  /* Contact Section: Center the form (no content-box here) */
-  #contact {
-    text-align: center;
-  }
-  #contact form {
-    display: inline-block;
-    max-width: 600px;
-    width: 100%;
-    text-align: left;
-    margin-top: 20px;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1119px) {
-    nav {
-      font-size: 1.3rem;
-    }
-    .hero {
-      background: url('../images/hero-image.jpg') no-repeat center top;
-      background-size: cover;
-      padding-right: 75px;
-    }
-    .hero-content h1 {
-      font-size: 2.5rem;
-    }
-    .hero-content h2 {
-      font-size: 1.5rem;
-    }
-    /* For small screens, allow content boxes to take full width */
-    .content-box {
-      max-width: 100%;
-    }
-  }
-  
+}
