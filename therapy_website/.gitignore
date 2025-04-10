@@ -13,3 +13,6 @@ env/
 # Django specific files
 db.sqlite3
 *.log
+
+#Commands
+commands.txt
