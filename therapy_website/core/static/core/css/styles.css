@@ -24,7 +24,7 @@ body {
   display: inline-block;
   margin-left: 30px;
   text-decoration: none;
-  color: #942d00;
+  color: #c3673f;
   font-weight: bold;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -262,6 +262,13 @@ body {
 }
 #contact button:hover {
   background-color: #b34233;
+}
+
+.form-note {
+  color: #666;
+  font-family: inherit;
+  font-size: 0.9rem;
+  margin-top: 10px;
 }
 
 /* ============================== 
