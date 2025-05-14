@@ -16,17 +16,31 @@ body {
   position: absolute;
   top: 20px;
   right: 250px;
-  font-size: 1.7rem;
   z-index: 10;
+
+  /* Frosted-glass background */
+  background: rgba(59, 58, 58, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Pill shape & spacing */
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+
+  font-size: 1.7rem;
 }
 
 .desktop-nav a {
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 50px;
   text-decoration: none;
   color: #c3673f;
   font-weight: bold;
   transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.desktop-nav a:first-child {
+  margin-left: 0;   /* no extra space before the first link */
 }
 
 .desktop-nav a:hover {
@@ -57,8 +71,8 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .hero-content h1 {
-  font-size: 4rem;
-  color: #942d00;
+  font-size: 3rem;
+  color: #a83a0b;
   margin: 0;
   line-height: 1;
 }
@@ -167,7 +181,8 @@ body {
 /* Quote Section 1 */
 .quote-section {
   position: relative;
-  background: url('../images/misty-forest.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+    url('../images/forrest-river.jpg') no-repeat center center;;
   background-size: cover;
   height: 400px;
   display: flex;
@@ -294,7 +309,7 @@ form textarea:focus {
   font-style: italic;
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1601px) {
   .mobile-nav {
     display: none;
   }
