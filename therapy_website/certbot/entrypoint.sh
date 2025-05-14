@@ -6,6 +6,6 @@ certbot renew --quiet --no-self-upgrade
 
 # Wait and then renew again in a loop (renew every 12 hours)
 while true; do
+    certbot renew --quiet --no-self-upgrade || true   # swallow 1
     sleep 12h
-    certbot renew --quiet --no-self-upgrade
 done

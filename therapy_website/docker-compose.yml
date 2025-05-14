@@ -24,3 +24,14 @@ services:
       - "443:443"
     depends_on:
       - web
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt           # cert store
+      - ./certbot/www:/var/www/certbot              # webroot for ACME
+    entrypoint: >
+      sh -c "while :; do
+               certbot renew --webroot -w /var/www/certbot --quiet;
+               sleep 12h;
+             done"
