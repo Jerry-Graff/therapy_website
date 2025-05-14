@@ -181,8 +181,7 @@ body {
 /* Quote Section 1 */
 .quote-section {
   position: relative;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
-    url('../images/forrest-river.jpg') no-repeat center center;;
+  background: url('../images/misty-forrest.jpg') no-repeat center center;
   background-size: cover;
   height: 400px;
   display: flex;
