@@ -1,7 +1,7 @@
 /* ORIGINAL IMAGE RENDERING (up to 1119px) */
 @media (max-width: 900px) {
     .hero {
-      background: url('../images/hero-image.jpg') no-repeat center top;
+      background: url('../images/hero-image-new.jpg') top center;
       background-size: cover;
       padding-left: 75px;
     }
@@ -21,7 +21,7 @@
     }
     
     .mobile-nav-toggle {
-      color: #c3673f;
+      color: #ead7c3;
       background: transparent;
       border: none;
       font-size: 1.8rem;
@@ -46,7 +46,7 @@
       display: inline-block;
       margin: 5px 0;
       text-decoration: none;
-      color: #c3673f;
+      color: #ead7c3;
       font-size: 0.8rem;
       font-weight: bold;
       background-color: rgba(0, 0, 0, 0.6);
@@ -60,7 +60,7 @@
     }
     /* Hero Section */
     .hero-content {
-      padding-top: 170px;
+      padding-top: 350px;
       text-align: left;
       padding-left: 20px;
       padding-right: 20px;
@@ -134,7 +134,7 @@
     }
     
     .mobile-nav-toggle {
-      color: #c3673f;
+      color: #ead7c3;
       background: transparent;
       border: none;
       font-size: 2rem;
@@ -159,7 +159,7 @@
       display: inline-block;
       margin: 5px 0;
       text-decoration: none;
-      color: #c3673f;
+      color: #ead7c3;
       font-size: 1.1rem;
       font-weight: bold;
       background-color: rgba(0, 0, 0, 0.6);
@@ -172,13 +172,13 @@
     }
     /* Hero Section */
     .hero-content {
-      padding-top: 170px;
+      padding-top: 450px;
       text-align: left;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 0px;
+      padding-right: 0px;
     }
     .hero-content h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin: 0 auto;
     }
     .hero-content h2 {
@@ -247,7 +247,7 @@
     }
     
     .mobile-nav-toggle {
-      color: #c3673f;
+      color: #ead7c3;
       background: transparent;
       border: none;
       font-size: 3rem;
@@ -272,7 +272,7 @@
       display: inline-block;
       margin: 5px 0;
       text-decoration: none;
-      color: #c3673f;
+      color: #ead7c3;
       font-size: 1.5rem;
       font-weight: bold;
       background-color: rgba(0, 0, 0, 0.6);
@@ -284,17 +284,17 @@
     }
     
     .hero-content {
-      padding-top: 400px;
+      padding-top: 500px;
       text-align: left;
       padding-left: 40px;
       padding-right: 20px;
     }
     .hero-content h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin: 0 auto;
     }
     .hero-content h2 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       margin: 0 auto;
       padding-left: 40px;
     }
@@ -370,7 +370,7 @@
     }
     
     .mobile-nav-toggle {
-      color: #c3673f;
+      color: #ead7c3;
       background: transparent;
       border: none;
       font-size: 3.5rem;
@@ -395,7 +395,7 @@
       display: inline-block;
       margin: 5px 0;
       text-decoration: none;
-      color: #c3673f;
+      color: #ead7c3;
       font-size: 1.6rem;
       font-weight: bold;
       background-color: rgba(0, 0, 0, 0.6);

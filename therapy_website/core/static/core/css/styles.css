@@ -34,7 +34,7 @@ body {
   display: inline-block;
   margin-left: 50px;
   text-decoration: none;
-  color: #c3673f;
+  color: #ead7c3;
   font-weight: bold;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -44,14 +44,14 @@ body {
 }
 
 .desktop-nav a:hover {
-  color: #b34233;
+  color: #dce0d9;
 }
 
 /* ============================== 
    Hero Section
 ============================== */
 .hero {
-  background: url('../images/hero-image.jpg') no-repeat center -250px;
+  background: url('../images/hero-image-new.jpg') top center;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -69,16 +69,17 @@ body {
 .hero-content h1,
 .hero-content h2 {
   font-family: 'Roboto', sans-serif;
+  font-weight: 900;
 }
 .hero-content h1 {
-  font-size: 3rem;
-  color: #a83a0b;
+  font-size: 3.5rem;
+  color: #ead7c3;
   margin: 0;
   line-height: 1;
 }
 .hero-content h2 {
-  font-size: 2rem;
-  color: #c3673f;
+  font-size: 2.5rem;
+  color: #dce0d9;
   margin: 0.1rem 0 0;
 }
 
@@ -114,13 +115,14 @@ body {
 }
 .content-section p {
   font-size: 1.2rem;
+  font-weight: 500;
   color: #333;
   line-height: 1.8;
   margin-bottom: 1em;
 }
 .content-section h2 {
   font-size: 2.5rem;
-  color: #c3673f;
+  color: #393e41;
   margin-bottom: 0.5em;
 }
 
@@ -128,7 +130,7 @@ body {
    Section-specific Backgrounds & Alignment
 ============================== */
 .section-left {
-  background-color: #E4D8CA;
+  background-color: #ead7c3;
   text-align: left;
 }
 .section-right {
@@ -139,7 +141,7 @@ body {
   margin-left: auto;
 }
 .section-centre {
-  background-color: #f0f0f9;
+  background-color: #ead7c3;
   text-align: center;
 }
 
