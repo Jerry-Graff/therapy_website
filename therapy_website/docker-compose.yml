@@ -18,6 +18,7 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./staticfiles:/app/static
+      - ./certbot/www:/var/www/certbot:ro
       - /etc/letsencrypt:/etc/letsencrypt:ro
     ports:
       - "80:80"
@@ -26,12 +27,8 @@ services:
       - web
 
   certbot:
-    image: certbot/certbot
+    build: ./certbot
     volumes:
-      - /etc/letsencrypt:/etc/letsencrypt           # cert store
-      - ./certbot/www:/var/www/certbot              # webroot for ACME
-    entrypoint: >
-      sh -c "while :; do
-               certbot renew --webroot -w /var/www/certbot --quiet;
-               sleep 12h;
-             done"
+      - /etc/letsencrypt:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: ["/entrypoint.sh"]   
