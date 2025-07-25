@@ -27,8 +27,13 @@ services:
       - web
 
   certbot:
-    build: certbot/certbot
+    image: certbot/certbot
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    entrypoint: ["/entrypoint.sh"]   
+    command: >
+      bash -c 'while true; do
+                certbot renew --webroot -w /var/www/certbot --quiet \
+                  --deploy-hook "nginx -s reload";
+                sleep 24h;
+              done'
