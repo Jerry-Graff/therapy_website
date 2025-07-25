@@ -57,12 +57,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 30px;
   position: relative;
 }
 .hero-content {
   text-align: left;
-  padding: 20px;
+  padding: 40px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 /* Hero text uses Roboto */

@@ -409,7 +409,7 @@
 
     .hero-content {
       padding-top: 500px;
-      padding-left: 150px;
+      padding-left: 50px;
       padding-right: 50px;
       text-align: left;
     }
@@ -443,16 +443,6 @@
     }
   }
 
-@media (max-width: 1600px) {
-  .hero {
-    padding-left: 0;
-  }
-  .hero-content {
-    padding-left: 0;
-    padding-right: 0; /* if you want full‑width */
-  }
-}
-  
   
 
   
