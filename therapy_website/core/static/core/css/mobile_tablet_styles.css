@@ -443,7 +443,15 @@
     }
   }
 
-
+@media (max-width: 1600px) {
+  .hero {
+    padding-left: 0;
+  }
+  .hero-content {
+    padding-left: 0;
+    padding-right: 0; /* if you want full‑width */
+  }
+}
   
   
 
