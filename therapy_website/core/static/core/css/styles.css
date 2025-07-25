@@ -62,7 +62,7 @@ body {
 }
 .hero-content {
   text-align: left;
-  padding: 5px;
+  padding: 10px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
 /* Hero text uses Roboto */
