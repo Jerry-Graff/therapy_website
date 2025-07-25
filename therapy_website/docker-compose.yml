@@ -27,7 +27,7 @@ services:
       - web
 
   certbot:
-    build: ./certbot
+    build: certbot/certbot
     volumes:
       - /etc/letsencrypt:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
