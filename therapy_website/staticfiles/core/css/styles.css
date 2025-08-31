@@ -16,34 +16,47 @@ body {
   position: absolute;
   top: 20px;
   right: 250px;
-  font-size: 1.7rem;
   z-index: 10;
+
+  /* Frosted-glass background */
+  background: rgba(59, 58, 58, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Pill shape & spacing */
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem;
+
+  font-size: 1.275rem; /* Was 1.7rem, now reduced by 25% */
 }
 
 .desktop-nav a {
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 50px;
   text-decoration: none;
-  color: #c3673f;
+  color: #ead7c3;
   font-weight: bold;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
+.desktop-nav a:first-child {
+  margin-left: 0;   /* no extra space before the first link */
+}
+
 .desktop-nav a:hover {
-  color: #b34233;
+  color: #dce0d9;
 }
 
 /* ============================== 
    Hero Section
 ============================== */
 .hero {
-  background: url('../images/hero-image.jpg') no-repeat center -250px;
+  background: url('../images/hero-image-new.jpg') top center;
   background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 50px;
   position: relative;
 }
 .hero-content {
@@ -51,20 +64,21 @@ body {
   padding: 40px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
 }
-/* Hero text uses Roboto */
+/* Hero text uses Roboto - KEEPING ORIGINAL SIZES */
 .hero-content h1,
 .hero-content h2 {
   font-family: 'Roboto', sans-serif;
+  font-weight: 900;
 }
 .hero-content h1 {
-  font-size: 4rem;
-  color: #942d00;
+  font-size: 3.5rem; /* UNCHANGED */
+  color: #ead7c3;
   margin: 0;
   line-height: 1;
 }
 .hero-content h2 {
-  font-size: 2rem;
-  color: #c3673f;
+  font-size: 2.5rem; /* UNCHANGED */
+  color: #dce0d9;
   margin: 0.1rem 0 0;
 }
 
@@ -84,7 +98,7 @@ body {
    Content Box Reveal (Only the text & images reveal)
 ============================== */
 .content-box {
-  font-size: large;
+  font-size: medium; /* Reduced from large */
   line-height: 1.7;
   max-width: 50%;
   width: 100%;
@@ -99,14 +113,15 @@ body {
   transform: translateY(0);
 }
 .content-section p {
-  font-size: 1.2rem;
+  font-size: 0.9rem; /* Was 1.2rem, now reduced by 25% */
+  font-weight: 500;
   color: #333;
   line-height: 1.8;
   margin-bottom: 1em;
 }
 .content-section h2 {
-  font-size: 2.5rem;
-  color: #c3673f;
+  font-size: 1.875rem; /* Was 2.5rem, now reduced by 25% */
+  color: #393e41;
   margin-bottom: 0.5em;
 }
 
@@ -114,7 +129,7 @@ body {
    Section-specific Backgrounds & Alignment
 ============================== */
 .section-left {
-  background-color: #E4D8CA;
+  background-color: #ead7c3;
   text-align: left;
 }
 .section-right {
@@ -125,7 +140,7 @@ body {
   margin-left: auto;
 }
 .section-centre {
-  background-color: #f0f0f9;
+  background-color: #ead7c3;
   text-align: center;
 }
 
@@ -140,7 +155,7 @@ body {
   left: calc(55% + 20px);
   top: 50%;
   transform: translateY(-50%);
-  width: 250px;
+  width: 188px; /* Was 250px, now reduced by 25% */
   height: auto;
   border-radius: 15px;
 }
@@ -156,7 +171,7 @@ body {
   left: calc(55% + 20px);
   top: 50%;
   transform: translateY(-50%);
-  width: 500px;
+  width: 375px; /* Was 500px, now reduced by 25% */
   height: auto;
   border-radius: 15px;
 }
@@ -167,7 +182,7 @@ body {
 /* Quote Section 1 */
 .quote-section {
   position: relative;
-  background: url('../images/misty-forest.jpg') no-repeat center center;
+  background: url('../images/misty-forrest.jpg') no-repeat center center;
   background-size: cover;
   height: 400px;
   display: flex;
@@ -223,12 +238,12 @@ body {
 .quote-text {
   font-style: italic;
   font-weight: 600;
-  font-size: 2.5rem;
+  font-size: 1.875rem; /* Was 2.5rem, now reduced by 25% */
   font-weight: bold;
   margin: 0;
 }
 .quote-author {
-  font-size: 2.5rem;
+  font-size: 1.875rem; /* Was 2.5rem, now reduced by 25% */
   margin-top: 20px;
   text-align: center;
   display: inline-block;
@@ -252,7 +267,7 @@ body {
   display: block;
   margin: 20px auto 0;
   padding: 12px 30px;
-  font-size: 1.2rem;
+  font-size: 0.9rem; /* Was 1.2rem, now reduced by 25% */
   border: none;
   border-radius: 10px;
   background-color: #c3673f;
@@ -281,7 +296,7 @@ form textarea {
   margin-bottom: 15px;
   border: 2px solid #ccc;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 0.75rem; /* Was 1rem, now reduced by 25% */
   transition: border-color 0.3s ease;
 }
 form input:focus,
@@ -294,7 +309,7 @@ form textarea:focus {
   font-style: italic;
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 901px) {
   .mobile-nav {
     display: none;
   }

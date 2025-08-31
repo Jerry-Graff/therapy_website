@@ -309,7 +309,7 @@ form textarea:focus {
   font-style: italic;
 }
 
-@media (min-width: 1601px) {
+@media (min-width: 901px) {
   .mobile-nav {
     display: none;
   }

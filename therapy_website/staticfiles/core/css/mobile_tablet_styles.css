@@ -1,13 +1,13 @@
-/* ORIGINAL IMAGE RENDERING (up to 1119px) */
+/* ORIGINAL IMAGE RENDERING (up to 900px) */
 @media (max-width: 900px) {
     .hero {
       background: url('../images/hero-image.jpg') no-repeat center top;
       background-size: cover;
       padding-left: 75px;
     }
-  }
+}
 
-  /* ---------- MOBILE STYLES (up to 350px) ---------- */
+/* ---------- MOBILE STYLES (up to 350px) ---------- */
 @media (max-width: 350px) {
     /* Mobile Navbar */
     .mobile-nav {
@@ -58,6 +58,7 @@
     .desktop-nav {
       display: none;
     }
+    
     /* Hero Section */
     .hero-content {
       padding-top: 170px;
@@ -86,6 +87,7 @@
     .content-section p {
       font-size: 0.8rem;
     }
+    
     /* Stack images below text */
     #about .container,
     #sessions .container {
@@ -120,8 +122,9 @@
         padding: 10px 20px;
     }
 }
-  /* ---------- MOBILE STYLES (351px to 500px) ---------- */
-  @media (min-width: 351px) and (max-width: 500px) {
+
+/* ---------- MOBILE STYLES (351px to 500px) ---------- */
+@media (min-width: 351px) and (max-width: 500px) {
     /* Mobile Navbar */
     .mobile-nav {
       position: absolute;
@@ -166,10 +169,12 @@
       border-radius: 4px;
       padding: 8px 12px;
     }
+    
     /* Hide Desktop Nav on Mobile */
     .desktop-nav {
       display: none;
     }
+    
     /* Hero Section */
     .hero-content {
       padding-top: 170px;
@@ -198,6 +203,7 @@
     .content-section p {
       font-size: 0.9rem;
     }
+    
     /* Stack images below text */
     #about .container,
     #sessions .container {
@@ -231,11 +237,10 @@
         font-size: 1rem;
         padding: 10px 20px;
     }
-  }
+}
 
-   /* ---------- TABLET STYLES (501px to 900px) ---------- */
-   @media (min-width: 501px) and (max-width: 900px) {
-    
+/* ---------- TABLET STYLES (501px to 900px) ---------- */
+@media (min-width: 501px) and (max-width: 900px) {
     .mobile-nav {
       position: absolute;
       top: 20px;
@@ -279,6 +284,7 @@
       border-radius: 4px;
       padding: 8px 12px;
     }
+    
     .desktop-nav {
       display: none;
     }
@@ -350,61 +356,22 @@
       font-size: 1rem;
       padding: 10px 20px;
     }
-  }
+}
 
-  /* ---------- TABLET STYLES (901px to 1200px) ---------- */
-  @media (min-width: 901px) and (max-width: 1200px) {
+/* ---------- LARGE TABLET/SMALL DESKTOP (901px to 1200px) ---------- */
+@media (min-width: 901px) and (max-width: 1200px) {
     /* Ensure no horizontal overflow */
     body {
       overflow-x: hidden;
     }
 
+    /* Hide mobile nav and show desktop nav */
     .mobile-nav {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 15px;
-      text-align: right;
-      width: calc(100% - 40px);
-      z-index: 10;
+      display: none !important;
     }
     
-    .mobile-nav-toggle {
-      color: #c3673f;
-      background: transparent;
-      border: none;
-      font-size: 2.5rem;
-      cursor: pointer;
-      margin: 10px;
-    }
-    
-    .mobile-nav-menu {
-      display: none;
-    }
-    
-    .mobile-nav.active .mobile-nav-menu {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      padding: 10px;
-      margin-top: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    .mobile-nav-menu a {
-      display: inline-block;
-      margin: 5px 0;
-      text-decoration: none;
-      color: #c3673f;
-      font-size: 1.2rem;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 4px;
-      padding: 8px 12px;
-    
-    }
     .desktop-nav {
-      display: none;
+      display: block;
     }
 
     .hero-content {
@@ -414,27 +381,23 @@
       text-align: left;
     }
     .hero-content h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       margin: 0;
     }
     .hero-content h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin: 0.2rem 0 0;
     }
   
     .bacp-logo {
-      width: 200px;
+      width: 250px;
       margin: 20px auto 0;
       display: block;
     }
     .therapy-room {
-      width: 250px;
+      width: 375px;
       margin: 20px auto 0;
       display: block;
       transform: translateX(-30px, -50px);
     }
-  }
-  
-  
-
-  
+}
