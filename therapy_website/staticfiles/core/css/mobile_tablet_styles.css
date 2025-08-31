@@ -373,7 +373,7 @@
       color: #c3673f;
       background: transparent;
       border: none;
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       cursor: pointer;
       margin: 10px;
     }
@@ -396,7 +396,7 @@
       margin: 5px 0;
       text-decoration: none;
       color: #c3673f;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       font-weight: bold;
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 4px;
@@ -414,21 +414,21 @@
       text-align: left;
     }
     .hero-content h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       margin: 0;
     }
     .hero-content h2 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin: 0.2rem 0 0;
     }
   
     .bacp-logo {
-      width: 250px;
+      width: 200px;
       margin: 20px auto 0;
       display: block;
     }
     .therapy-room {
-      width: 375px;
+      width: 250px;
       margin: 20px auto 0;
       display: block;
       transform: translateX(-30px, -50px);
